@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>corr</Title>
+			<Shortcut>corr</Shortcut>
+			<Description>Фрагмент кода для инструкции</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>expression</ID>
+					<ToolTip>Выражение для вычисления</ToolTip>
+					<Default>true</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[Console.WriteLine("Введите число: ");
+while (true)
+{
+		var input = Console.ReadLine();
+		var num = 0;
+		if (int.TryParse(input, out int result))
+		{
+				num = result;
+				break;
+		}
+		else
+		{
+				Console.WriteLine("Попробуйте ещё раз, похоже вы ввели некорректные данные!");
+		}
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
+
